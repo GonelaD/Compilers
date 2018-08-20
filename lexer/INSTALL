@@ -1,0 +1,13 @@
+Please follow the below steps for installation and setup:
+
+1. Download and setup antlr-4.7.1-complete.jar from http://www.antlr.org/. or
+	a. run the commands below
+		i. sudo curl -O https://www.antlr.org/download/antlr-4.7.1-complete.jar
+		ii. export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
+		iii. alias antlr4='java -jar /usr/local/lib/antlr-4.7.1-complete.jar'
+		iv. alias grun='java org.antlr.v4.gui.TestRig'
+2. Install uuid for your distribution. Ubuntu users can run "sudo apt-get install uuid-dev" command.
+3. Linux users run the runtime_setup.sh script to download and setup antlr-cpp runtime. (./runtime_setup)
+4. Check whether you have the below lines in your ~/.bashrc file
+	"export ANTLR4CPP=<path-to-lexer-directory>/antlr4-cpp"
+	"export LD_LIBRARY_PATH=<path-to-lexer-directory>/antlr4-cpp/run/usr/local/lib:<other-library-paths>"
